@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+void Pattern(int iRow, int iCol)
+{
+    int i = 0, j = 0, iNum = 0;
+
+    for(i = 1,iNum = 1; i <= iRow; i++)
+    {
+        for(j = 1; j <= iCol; j++,iNum++)
+        {
+            if(iNum == 10)
+            {
+                iNum = 1;
+            }
+            printf("%d  ",iNum);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+int main()
+{
+    int iValue1 = 0, iValue2 = 0;
+
+    printf("Enter number of rows and columns : \n");
+    scanf("%d %d",&iValue1,&iValue2);
+
+    Pattern(iValue1,iValue2);
+
+    return 0;
+}
